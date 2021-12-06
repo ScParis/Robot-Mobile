@@ -1,6 +1,10 @@
 *** Settings ***
 
-Library           AppiumLibrary
+Library             AppiumLibrary
+Library             libs/extends.py
+Resource            helpers.robot
+
+
 
 *** Keywords ***
 
@@ -14,18 +18,9 @@ Open Session
     ...                      app=/media/scherman/HD1/Cursos/Automação de teste/Robot-Mobile/apk/twp.apk
     ...                      udid=emulator-5554
 
+    Get Started
+
 Close Session
-
-    Close Application
-
-Get Started
     
-    Wait Until Page Contains                COMEÇAR
-    Click Text                              COMEÇAR
-
-Open Nav
-
-    Wait Until Element Is Visible           xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]
-
-    Click Element                            xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]
-    Wait Until Element Is Visible            id=io.qaninja.android.twp:id/navView
+    Capture Page Screenshot
+    Close Application
