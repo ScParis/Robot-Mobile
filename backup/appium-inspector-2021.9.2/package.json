@@ -180,7 +180,7 @@
     "concurrently": "^6.2.0",
     "cross-env": "^7.0.0",
     "devtron": "^1.4.0",
-    "electron": "^13.1.8",
+    "electron": "^15.5.5",
     "electron-builder": "^22.13.0",
     "electron-devtools-installer": "^3.0.0",
     "eslint-config-appium": "^4.5.0",
